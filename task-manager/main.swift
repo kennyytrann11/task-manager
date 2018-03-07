@@ -10,19 +10,37 @@ import Foundation
 
 mainMenu()
 
-var menu = Int(readLine()!)!
+func fMenu() {
+    let menu = Int(readLine()!)!
 
 if menu == 1 {
     addTasks()
-    
+    print("Press Enter to continue")
+    _ = readLine()
+    mainMenu()
+    fMenu()
 }
 
 if menu == 2 {
     viewTasks()
-    
+    print("Press Enter to continue")
+    _ = readLine()
+    mainMenu()
+    fMenu()
 }
 
 if menu == 3 {
+    removeTask()
+    print("Press Enter to continue")
+    _ = readLine()
+    mainMenu()
+    fMenu()
+}
+    
+if menu == 4 {
+    
+}
     
 }
 
+fMenu()
